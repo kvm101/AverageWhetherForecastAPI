@@ -133,7 +133,7 @@
        "message": "Preferences updated successfully."
      }
      ```
-     
+
 6. **Get User Preferences**
    - **Endpoint**: `GET /user/preferences`
    - **Description**: Get the current user settings.
@@ -211,9 +211,5 @@
 
 ## Versions Info:
 **version 0.0.1-alfa (15.01.25):**
-- added the basic idea of ​​what the API should look like.
-
-
-
-
-
+- Added the basic idea of what the API should look like.
+- Added Endpoints
