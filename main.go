@@ -1,7 +1,9 @@
 package main
 
 import (
+	"awf/auth"
 	"awf/awf"
+	"awf/user"
 	"log"
 	"net/http"
 	"time"
@@ -26,10 +28,10 @@ func main() {
 	wheaterAPI.HandleFunc("/weather/forecast-10", awf.HandlerWForecastT)
 	wheaterAPI.HandleFunc("/weather/alerts", awf.HandlerWAlert)
 	wheaterAPI.HandleFunc("/weather/history", awf.HandlerWHistory)
-	userAPI.HandleFunc("/user/preferences", awf.HandlerUPreferences)
-	userAPI.HandleFunc("/user/history", awf.HandlerUHistory)
-	authAPI.HandleFunc("/auth/login", awf.HandlerAuthLogin)
-	authAPI.HandleFunc("/auth/registration", awf.HandlerAuthRegistration)
+	userAPI.HandleFunc("/user/preferences", user.HandlerUPreferences)
+	userAPI.HandleFunc("/user/history", user.HandlerUHistory)
+	authAPI.HandleFunc("/auth/login", auth.HandlerAuthLogin)
+	authAPI.HandleFunc("/auth/registration", auth.HandlerAuthRegistration)
 
 	log.Println("Server is running. api:port - (wheaterAPI:9898, userAPI:9797, authAPI:9696).")
 	go startInfoUpdate()

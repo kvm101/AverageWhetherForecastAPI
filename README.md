@@ -212,5 +212,6 @@
 ## Versions Info:
 **version 0.0.1-alfa (15.01.25):**
 - Added the basic idea of what the API should look like. `15.01.25`
-- Added Endpoints `16.01.25`
-- Added structs and redis functions `17.01.25`
+- Added Endpoints. `16.01.25`
+- Added structs and redis functions. `17.01.25`
+- The package 'awf' is divided into several packages: 'awf', 'user', 'auth'. `17.01.25`
