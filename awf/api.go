@@ -6,7 +6,7 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
-var red = Redis{redis.NewClient(&redis.Options{
+var rd = Redis{redis.NewClient(&redis.Options{
 	Addr:     "127.0.0.1:9736",
 	Password: "",
 	DB:       0,

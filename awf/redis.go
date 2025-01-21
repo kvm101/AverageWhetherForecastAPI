@@ -8,14 +8,6 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
-//	client := redis.NewClient(&redis.Options{
-//		Addr:     "127.0.0.1:9736",
-//		Password: "",
-//		DB:       0,
-//	})
-//
-// ping, err := client.Ping(context.Background()).Result()
-
 type Redis struct {
 	client *redis.Client
 }
