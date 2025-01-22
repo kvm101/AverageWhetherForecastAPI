@@ -6,17 +6,7 @@ import (
 	"awf/user"
 	"log"
 	"net/http"
-	"time"
 )
-
-func startInfoUpdate() {
-	// client := http.DefaultClient
-
-	for {
-		// client.Get("https://api.weatherapi.com/v1/current.json?key=h7454705f74g44b429e231834251970&q=London&aqi=no")
-		time.Sleep(time.Hour * 24)
-	}
-}
 
 func main() {
 	wheaterAPI := http.NewServeMux()
@@ -34,7 +24,6 @@ func main() {
 	authAPI.HandleFunc("/auth/registration", auth.HandlerAuthRegistration)
 
 	log.Println("Server is running. api:port - (wheaterAPI:9898, userAPI:9797, authAPI:9696).")
-	go startInfoUpdate()
 
 	if err := http.ListenAndServe(":9898", wheaterAPI); err != nil {
 		log.Fatal(err)
